@@ -13,22 +13,8 @@ module.exports = function GruntCloudFlare(grunt) {
     });
     var done = this.async();
     var urls = this.options();
-    if (urls) {
-      (urls.url).forEach(function(url) {
-        options.url = url;
-        request.post({
-          url: CLOUDFLARE_API,
-          form: options,
-          json: true
-        }, function CloudFlareResponse(err, res, body) {
-          if (err || body.result !== 'success') {
-            grunt.log.writeln(body.msg);
-            return done(false);
-          }
-          done();
-        });
-      }, this)
-    } else {
+    (urls.url).forEach(function(url) {
+      options.url = url;
       request.post({
         url: CLOUDFLARE_API,
         form: options,
@@ -40,7 +26,6 @@ module.exports = function GruntCloudFlare(grunt) {
         }
         done();
       });
-    }
-
+    }, this)
   });
 };
