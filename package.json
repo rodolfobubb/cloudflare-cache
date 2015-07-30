@@ -1,0 +1,51 @@
+{
+  "name": "grunt-cloudflare-cache",
+  "description": "Purge the CloudFlare Cache",
+  "version": "0.0.6",
+  "homepage": "https://github.com/bubbweb/cloudflare-cache",
+  "author": {
+    "name": "Bubb Web Studio",
+    "email": "rodolfo@bubb.com.br",
+    "url": "http://bubb.com.br/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bubbweb/cloudflare-cache.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bubbweb/cloudflare-cache/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/bubbweb/cloudflare-cache/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {},
+  "dependencies": {
+    "request": "~2.27.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "cloudflare",
+    "grunt",
+    "cache",
+    "cdn"
+  ],
+  "readme": "grunt-cloudflare\n================\n\nCloudFlare Grunt Task talking to the CloudFlare API.\nThe default action is to purge the CloudFlare cache.\n\nOptions\n-------\n\n``` js\ncloudflare: {\n  /* Action, default is to purge the cache */\n  a: 'fpurge_ts',\n  /* CloudFlare credentials */\n  /* API key */\n  tkn: process.env.CLOUDFLARE_API_KEY,\n  /* CloudFlare e-mail */\n  email: process.env.CLOUDFLARE_EMAIL,\n  /* Domain */\n  z: process.env.CLOUDFLARE_DOMAIN,\n  /* Files */\n  url: ['http://www.example.com/style.css', 'http://www.example.com/app.js']\n}\n```\n\nFor more options, see the\n [CloudFlare API Docs](http://www.cloudflare.com/docs/client-api.html#s2.1).\n\nModifying this plug-in to support more CloudFlare actions\nshould be straight forward.\nDon't hesitate sending in a pull request\nif you need another feature.\n",
+  "readmeFilename": "README.md",
+  "_id": "grunt-cloudflare-cache@0.0.6",
+  "dist": {
+    "shasum": "694ea6bfb429cb7f02b7e8964815061c4b6b25d1"
+  },
+  "_from": "grunt-cloudflare-cache@0.0.6",
+  "_resolved": "https://registry.npmjs.org/grunt-cloudflare-cache/-/grunt-cloudflare-cache-0.0.6.tgz"
+}
